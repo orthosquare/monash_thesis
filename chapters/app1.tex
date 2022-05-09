@@ -1,0 +1,28 @@
+\documentclass[float=false, crop=false, class=report, a4, 12pt, onesided]{standalone}
+\usepackage{standalone}
+
+\usepackage{mthesis-math-chapters}
+\usepackage{xr}
+
+\externaldocument{../thesis}
+
+\begin{document}
+
+\ifstandalone
+	\appendix
+\fi
+
+\chapter{Examples}\label{ch:appendix1}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width = 9cm]{neat_little_package.jpg}
+\end{center}
+\caption{A meme.}
+\end{figure}
+
+\ifstandalone
+	\bibliography{../thesis-refs}
+\fi
+
+\end{document}

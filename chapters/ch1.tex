@@ -1,0 +1,49 @@
+\documentclass[float=false, crop=false, class=report, a4, 12pt, onesided]{standalone}
+\usepackage{standalone}
+
+\usepackage{mthesis-math-chapters}
+
+\begin{document}
+
+\ifstandalone
+	\setcounter{chapter}{0}
+\fi
+
+\chapter{Getting started}
+
+This template is intended for use by students in the School of Mathematics who
+are starting to write their thesis. This template is designed to take advantage
+of the \LaTeX packages that can be used to build a beautiful monolithic project
+in a way that is maintainable and modular.
+
+This template has the following folder structure.
+
+\begin{figure}[ht]
+	\centering
+	\scalebox{0.65}{
+		\subimport{../img/}{dtree}
+	}
+	\caption{The directory structure of the thesis template.\label{fig:dirstruct}}
+\end{figure}
+
+This folder structure is designed to be as straight forward as possible. Each
+chapter is written in an independent and compilable file, each tikz image can
+be written in the chapter in which it appears or can be written in the image
+folder where it can be imported for improved modularity.
+
+This modularity is achieved through the use of two packages, the standalone
+package and the import package, discussed in \Cref{cha:standalone}. As most
+mathematics students will also be required to battle with tikz, we have
+included the `./tikz/' folder and the tikz library package `external' described
+in \Cref{cha:tikz}.
+
+Lastly, the aim of this project is to allow for quick and easy modification of
+the preamble in a way that is minimally disruptive. This detail is described in
+\Cref{cha:preamble}. For examples related to the preamble as it is given, see
+\Cref{app:usages}.
+
+\ifstandalone
+	\bibliography{../thesis-refs}
+\fi
+
+\end{document}

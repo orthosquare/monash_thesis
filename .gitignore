@@ -19,7 +19,8 @@
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-# *.pdf
+*.pdf
+!img/**.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
@@ -138,6 +139,8 @@ acs-*.bib
 # TODO Comment the next line if you want to keep your tikz graphics files
 *.tikz
 *-tikzDictionary
+tikz/*
+!tikz/**/README
 
 # listings
 *.lol

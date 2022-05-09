@@ -1,0 +1,79 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mthesis-user}
+
+% Mathematics imports, proof environement and relevant commands
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% comment out for slant inequalities
+% \renewcommand{\geq}{\geqslant}
+% \renewcommand{\leq}{\leqslant}
+% \renewcommand{\ge}{\geqslant}
+% \renewcommand{\le}{\leqslant}
+
+% Comment out for '(1)' as opposed to 'Equation (1)'
+%\crefname{equation}{}{}
+%\Crefname{equation}{}{}
+
+% Useful Packages
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{float}
+
+% Cleveref and in document hyperlinks. - Cleveref must be loaded after AMSMath
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+% todonotes package
+\setlength{\marginparwidth}{2cm}
+\usepackage{todonotes}
+\renewcommand{\todo}[2][]{\tikzexternaldisable\@todo[#1]{#2}\tikzexternalenable}
+
+% Bibliography setup
+\usepackage[numbers]{natbib}
+\bibliographystyle{apalike}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{assumption}{Assumption}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{construction}[theorem]{Construction}
+
+\Crefname{conjecture}{Conjecture}{Conjectures} % It doesn't know how to pluralize Conjecture
+
+% Common maths sets
+\newcommand{\A}{\mathbb{A}} % Algebraic Numbers
+\newcommand{\C}{\mathbb{C}} % Complex
+\newcommand{\F}{\mathbb{F}} % Field
+\newcommand{\N}{\mathbb{N}} % Naturals
+\newcommand{\Q}{\mathbb{Q}} % Rationals
+\newcommand{\R}{\mathbb{R}} % Reals
+\newcommand{\T}{\mathbb{T}} % Unimodular
+\newcommand{\Z}{\mathbb{Z}} % Integers
+
+% This is the listings used for writing latex in this template.
+\usepackage{listings}
+\lstset
+{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{magenta},
+}
